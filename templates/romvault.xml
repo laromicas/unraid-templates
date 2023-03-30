@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/</Support>
+  <Support>https://github.com/laromicas/docker-romvault/issues</Support>
   <Project>https://www.romvault.com/</Project>
   <Overview>RomVault will take one or more DAT files and your set of ROM (zip) files, and clean up your files to match your DAT files. If you find more ROMs to add to your collection RomVault will scan and merge in these files, and if new DATs are released you can easily scan in these new DATs and update your ROM collections to match, all of this can be done with just a few button clicks in the UI.&#xD;
 &#xD;
@@ -21,21 +21,20 @@ Known Issues:&#xD;
 &#xD;
 For a complete documentation of this container, see&#xD;
 https://github.com/laromicas/docker-romvault/blob/master/README.md</Overview>
-  <Category>Other: Status:Beta</Category>
-  <WebUI>http://[IP]:[PORT:5800]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/jdownloader-2.xml</TemplateURL>
+  <Category>Tools</Category>
+  <WebUI>http://[IP]:[PORT:7807]</WebUI>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/laromicas/docker-romvault/master/media/romvault-icon.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1680142720</DateInstalled>
   <DonateText>If you like my work please consider donating.</DonateText>
-  <DonateLink>https://paypal.me/JocelynLeSage/0usd</DonateLink>
+  <DonateLink>https://paypal.me/laromicas/0usd</DonateLink>
   <Requires/>
-  <Config Name="DatRoot Directory" Target="/config/DatRoot" Default="/mnt/user/appdata/ROMVault/DatRoot" Mode="rw,slave" Description="This is where dats will be placed.&#13;&#10;Container path: /output/DatRoot" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/ROMVault/DatRoot</Config>
-  <Config Name="RomRoot Directory" Target="/config/RomRoot" Default="/mnt/user/appdata/ROMVault/RomRoot" Mode="rw,slave" Description="This is the where sorted roms will be placed. Container path: /output/RomRoot" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/ROMVault/RomRoot</Config>
-  <Config Name="ToSort Directory" Target="/config/ToSort" Default="/mnt/user/appdata/ROMVault/ToSort" Mode="rw" Description="This is the where unknown roms will be placed. Container path: /output/ToSort" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/ROMVault/ToSort</Config>
-  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/ROMVault" Mode="rw" Description="This is where the application stores its configuration, cache file, log and any files needing persistency.Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ROMVault</Config>
+  <Config Name="DatRoot Directory" Target="/config/DatRoot" Default="/mnt/user/appdata/ROMVault/DatRoot" Mode="rw,slave" Description="This is where dats will be placed.&#13;&#10;Container path: /output/DatRoot" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="RomRoot Directory" Target="/config/RomRoot" Default="/mnt/user/appdata/ROMVault/RomRoot" Mode="rw,slave" Description="This is the where sorted roms will be placed. Container path: /output/RomRoot" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="ToSort Directory" Target="/config/ToSort" Default="/mnt/user/appdata/ROMVault/ToSort" Mode="rw" Description="This is the where unknown roms will be placed. Container path: /output/ToSort" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/ROMVault" Mode="rw" Description="This is where the application stores its configuration, cache file, log and any files needing persistency.Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
   <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="Mask that controls how file permissions are set for newly created files. The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="false" Mask="false">000</Config>
