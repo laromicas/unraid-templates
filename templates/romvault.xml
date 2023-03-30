@@ -4,6 +4,7 @@
   <Repository>laromicas/romvault</Repository>
   <Registry>https://hub.docker.com/r/laromicas/romvault/</Registry>
   <Network>bridge</Network>
+  <Beta>true</Beta>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
