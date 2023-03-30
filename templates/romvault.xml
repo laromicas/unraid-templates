@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ROMVault</Name>
+  <Repository>laromicas/romvault</Repository>
+  <Registry>https://hub.docker.com/r/laromicas/romvault/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/</Support>
+  <Project>https://www.romvault.com/</Project>
+  <Overview>RomVault will take one or more DAT files and your set of ROM (zip) files, and clean up your files to match your DAT files. If you find more ROMs to add to your collection RomVault will scan and merge in these files, and if new DATs are released you can easily scan in these new DATs and update your ROM collections to match, all of this can be done with just a few button clicks in the UI.&#xD;
+&#xD;
+The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.&#xD;
+&#xD;
+Also, being based on Alpine Linux, size of this container is very small (less than 200 MB in download size).&#xD;
+&#xD;
+Known Issues:&#xD;
+- Accessing several items in the help menu crashes the application.&#xD;
+- Opening TrrntZip cannot be closed.&#xD;
+&#xD;
+For a complete documentation of this container, see&#xD;
+https://github.com/laromicas/docker-romvault/blob/master/README.md</Overview>
+  <Category>Other: Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/jdownloader-2.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/laromicas/docker-romvault/master/media/romvault-icon.jpg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1680142720</DateInstalled>
+  <DonateText>If you like my work please consider donating.</DonateText>
+  <DonateLink>https://paypal.me/JocelynLeSage/0usd</DonateLink>
+  <Requires/>
+  <Config Name="DatRoot Directory" Target="/config/DatRoot" Default="/mnt/user/appdata/ROMVault/DatRoot" Mode="rw,slave" Description="This is where dats will be placed.&#13;&#10;Container path: /output/DatRoot" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/ROMVault/DatRoot</Config>
+  <Config Name="RomRoot Directory" Target="/config/RomRoot" Default="/mnt/user/appdata/ROMVault/RomRoot" Mode="rw,slave" Description="This is the where sorted roms will be placed. Container path: /output/RomRoot" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/ROMVault/RomRoot</Config>
+  <Config Name="ToSort Directory" Target="/config/ToSort" Default="/mnt/user/appdata/ROMVault/ToSort" Mode="rw" Description="This is the where unknown roms will be placed. Container path: /output/ToSort" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/ROMVault/ToSort</Config>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/ROMVault" Mode="rw" Description="This is where the application stores its configuration, cache file, log and any files needing persistency.Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ROMVault</Config>
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="Mask that controls how file permissions are set for newly created files. The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="false" Mask="false">000</Config>
+  <Config Name="Niceness (priority)" Target="APP_NICENESS" Default="" Mode="" Description="Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.NOTE: Setting a negative value requires additional permissions.  Thus, --cap-add=SYS_NICE must be added in Extra Parameters (shown when Advanced View is enabled)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Display Width" Target="DISPLAY_WIDTH" Default="1280" Mode="" Description="Width (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false">1280</Config>
+  <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false">768</Config>
+  <Config Name="Secure Connection" Target="SECURE_CONNECTION" Default="0" Mode="" Description="Whether or not an encrypted connection should be used to access the application's GUI.  Set to 1 to encrypt the connection.Note: When enabling the secure connection, security parameters needs to be generated.  This one-time operation is done during container startup.  Depending on your system, this could take a few minutes.  GUI of the application won't be available until the operation completes." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+  <Config Name="Extra x11vnc Options" Target="X11VNC_EXTRA_OPTS" Default="" Mode="" Description="Extra options to pass to the x11vnc server running in the Docker container.Warning: For advanced users. Do not use unless you know what you are doing." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Install Packages" Target="INSTALL_EXTRA_PKGS" Default="" Mode="" Description="Space-separated list of Alpine Linux packages to install.  See https://pkgs.alpinelinux.org for the list of available Alpine Linux packages." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="WEB Port for GUI" Target="5800" Default="7807" Mode="tcp" Description="Port used to access the application's GUI via the web interface.NOTE: This applies only when Network Type is set to Bridge.  For other network types, port 5800 should be used instead." Type="Port" Display="advanced-hide" Required="true" Mask="false">7807</Config>
+  <Config Name="VNC Port for GUI" Target="5900" Default="7907" Mode="tcp" Description="Port used to access the application's GUI via the VNC protocol.  Optional if no VNC client is used.NOTE: This applies only when Network Type is set to Bridge.  For other network types, port 5900 should be used instead." Type="Port" Display="advanced-hide" Required="false" Mask="false">7907</Config>
+</Container>
