@@ -22,13 +22,14 @@ Known Issues:&#xD;
 &#xD;
 For a complete documentation of this container, see&#xD;
 https://github.com/laromicas/docker-romvault/blob/master/README.md</Overview>
-  <Category>Tools</Category>
+  <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:5800]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/laromicas/unraid-templates/master/templates/romvault.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/laromicas/docker-romvault/master/media/romvault-icon.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
+  <DateInstalled>1680196917</DateInstalled>
   <DonateText>If you like my work please consider donating.</DonateText>
   <DonateLink>https://paypal.me/laromicas/0usd</DonateLink>
   <Requires/>
