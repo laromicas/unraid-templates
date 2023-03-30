@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/laromicas/docker-romvault/issues</Support>
+  <Support>https://forums.unraid.net/topic/137138-support-for-laromicas-romvault-docker-container/</Support>
   <Project>https://www.romvault.com/</Project>
   <Overview>RomVault will take one or more DAT files and your set of ROM (zip) files, and clean up your files to match your DAT files. If you find more ROMs to add to your collection RomVault will scan and merge in these files, and if new DATs are released you can easily scan in these new DATs and update your ROM collections to match, all of this can be done with just a few button clicks in the UI.&#xD;
 &#xD;
