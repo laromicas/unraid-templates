@@ -14,7 +14,7 @@
 &#xD;
 The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.&#xD;
 &#xD;
-Also, being based on Alpine Linux, size of this container is very small (less than 200 MB in download size).&#xD;
+Based on Ubuntu, size is big, but text is displayed correctly.&#xD;
 &#xD;
 Known Issues:&#xD;
 - Accessing several items in the help menu crashes the application.&#xD;
@@ -28,6 +28,9 @@ For documentation about using ROMVault see&#xD; https://www.romvault.com/
   </Overview>
   <Category>Tools:</Category>
    <Changes>
+###v1.0.0-rc7
+- Updated ROMVault to 3.6 WIP5 which fixes datvault issues.
+- Changed base to Ubuntu, it fixes text display.
 ###v1.0.0-rc5 (2023-03-31)
 - Fixed main window management.
 - Fixed bug that prevented start the container after closing.
