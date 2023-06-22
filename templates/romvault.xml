@@ -4,7 +4,6 @@
   <Repository>laromicas/romvault</Repository>
   <Registry>https://hub.docker.com/r/laromicas/romvault/</Registry>
   <Network>bridge</Network>
-  <Beta>true</Beta>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -18,8 +17,6 @@ Based on Ubuntu, size is big, but text is displayed correctly.&#xD;
 &#xD;
 Known Issues:&#xD;
 - Accessing several items in the help menu crashes the application.&#xD;
-- Missing text on some parts [ROMVault Open Issue](https://romvault.convas.io/bugs/missing-text-when-using-linux-clh0zjrtv00igos281qd3ik27).&#xD;
-- DatVault seems to be broken, have not tested it yet.&#xD;
 &#xD;
 For a complete documentation of this container, see&#xD;
 https://github.com/laromicas/docker-romvault/blob/master/README.md
@@ -28,6 +25,10 @@ For documentation about using ROMVault see&#xD; https://www.romvault.com/
   </Overview>
   <Category>Tools:</Category>
    <Changes>
+###v1.0.0 (2023-06-22)
+- Removed beta label, all essential fixes where made.
+- Updated ROMVault to 3.6 DEV 2.
+- Changed versioning of images to have romvault version and docker image version.
 ###v1.0.0-rc7
 - Updated ROMVault to 3.6 WIP5 which fixes datvault issues.
 - Changed base to Ubuntu, it fixes text display.
