@@ -25,7 +25,9 @@ For documentation about using ROMVault see&#xD; https://www.romvault.com/
   </Overview>
   <Category>Tools:</Category>
    <Changes>
-###v1.0.0 (2023-06-22)
+###v1.0.0-3.6.1 (2023-06-22)
+- Updated ROMVault to 3.6.1
+###v1.0.0-3.6.0dev2 (2023-06-22)
 - Removed beta label, all essential fixes where made.
 - Updated ROMVault to 3.6 DEV 2.
 - Changed versioning of images to have romvault version and docker image version.
