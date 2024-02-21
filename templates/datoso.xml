@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Datoso</Name>
+  <Repository>laromicas/datoso</Repository>
+  <Registry>https://hub.docker.com/r/laromicas/datoso/</Registry>
+  <Network>bridge</Network>
+  <Beta>true</Beta>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>Pending</Support>
+  <Project>https://github.com/laromicas/datoso/</Project>
+  <Overview>Datoso is a WIP Python command line tool to download and organize your Dat Roms.&#xD;
+  As today the tool supports dat-omatic, redump, and translated-english dats.&#xD;
+  It merges all the dats in a tree folder structure thought to use with Emulators rather than dats.&#xD;
+  The dat file format must be compatible with ROMVault.&#xD;
+&#xD;
+For a complete documentation of this container, see&#xD;
+https://github.com/laromicas/datoso/blob/master/README.md
+
+For documentation about using ROMVault see&#xD; https://www.romvault.com/
+  </Overview>
+  <Category>Tools:</Category>
+   <Changes>
+###v1.0.0-0.3.10
+- First alpha version
+  </Changes>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/laromicas/unraid-templates/master/templates/datoso.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/laromicas/datoso/master/bearlogo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText>If you like my work please consider donating.</DonateText>
+  <DonateLink>https://paypal.me/laromicas/0usd</DonateLink>
+  <Requires/>
+
+
+  <Config Name="Datoso Directory" Target="/datoso" Default="/mnt/user/appdata/datoso/datoso" Mode="rw,slave" Description="This is the where datoso database will be placed. Container path: /datoso" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="DatRoot Directory" Target="/DatRoot" Default="/mnt/user/appdata/ROMVault/DatRoot" Mode="rw,slave" Description="This is where dats will be placed. Container path: /DatRoot" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Downloaded Dats Directory" Target="/download" Default="/mnt/user/appdata/datoso/download" Mode="rw,slave" Description="This is where unknown roms will be placed. Container path: /download" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/ROMVault" Mode="rw" Description="This is where the application stores its configuration, cache file, log and any files needing persistency.Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="Mask that controls how file permissions are set for newly created files. The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="false" Mask="false">000</Config>
+
+  <Config Name="LOG.LOGFILE" Target="LOG.LOGFILE" Default="datoso.log" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="FBNEO.FETCHFULL" Target="FBNEO.FETCHFULL" Default="true" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="FBNEO.FETCHLIGHT" Target="FBNEO.FETCHLIGHT" Default="false" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="UPDATE_URLS.GOOGLESHEETURL" Target="UPDATE_URLS.GOOGLESHEETURL" Default="https://sheets.googleapis.com/v4/spreadsheets/1LgU7uJOtVOUWYkdoaeSbux41biFwpbzVosm98bgdN3k/values/Systems!A1:E300?key=AIzaSyA2pmHY5FVJFEjauoE8kKV6-UcCM4Tfk44" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="DOWNLOAD.PREFFERDOWNLOADUTILITY" Target="DOWNLOAD.PREFFERDOWNLOADUTILITY" Default="wget" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="IMPORT.IGNOREREGEX" Target="IMPORT.IGNOREREGEX" Default=".*(?:MAME|FruitMachines|Fruit Machine|TeknoParrotGames|PleasureDome|fixDat).*" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="LOG.LOGGING" Target="LOG.LOGGING" Default="true" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="LOG.LOGLEVEL" Target="LOG.LOGLEVEL" Default="INFO" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.ARCADE" Target="PREFFIXES.ARCADE" Default="Arcade" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.AUDIO" Target="PREFFIXES.AUDIO" Default="Other/Audio" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.BOOK" Target="PREFFIXES.BOOK" Default="Other/Book" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.CALCULATOR" Target="PREFFIXES.CALCULATOR" Default="Other/Calculator" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.COMPUTER" Target="PREFFIXES.COMPUTER" Default="Computer" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.CONSOLE" Target="PREFFIXES.CONSOLE" Default="Consoles" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.HANDHELD" Target="PREFFIXES.HANDHELD" Default="Consoles" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.PDA" Target="PREFFIXES.PDA" Default="Mobile" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.PHONE" Target="PREFFIXES.PHONE" Default="Mobile" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.SOURCECODE" Target="PREFFIXES.SOURCECODE" Default="Other/Source Code" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.VIDEO" Target="PREFFIXES.VIDEO" Default="Other/Video" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.MOBILE" Target="PREFFIXES.MOBILE" Default="Mobile" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.MANUALS" Target="PREFFIXES.MANUALS" Default="Other/Manuals" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+  <Config Name="PREFFIXES.BIOSIMAGES" Target="PREFFIXES.BIOSIMAGES" Default="Other/BIOS Images" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
+
+</Container>
