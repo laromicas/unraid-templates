@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Datoso</Name>
+  <Name>datoso</Name>
   <Repository>laromicas/datoso</Repository>
   <Registry>https://hub.docker.com/r/laromicas/datoso/</Registry>
   <Network>bridge</Network>
@@ -8,7 +8,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>Pending</Support>
+  <Support>https://hub.docker.com/r/laromicas/datoso/</Support>
   <Project>https://github.com/laromicas/datoso/</Project>
   <Overview>Datoso is a WIP Python command line tool to download and organize your Dat Roms.&#xD;
   As today the tool supports dat-omatic, redump, and translated-english dats.&#xD;
@@ -25,7 +25,7 @@ For documentation about using ROMVault see&#xD; https://www.romvault.com/
 ###v1.0.0-0.3.10
 - First alpha version
   </Changes>
-  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/laromicas/unraid-templates/master/templates/datoso.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/laromicas/datoso/master/bearlogo.png</Icon>
   <ExtraParams/>
@@ -40,11 +40,6 @@ For documentation about using ROMVault see&#xD; https://www.romvault.com/
   <Config Name="Datoso Directory" Target="/datoso" Default="/mnt/user/appdata/datoso/datoso" Mode="rw,slave" Description="This is the where datoso database will be placed. Container path: /datoso" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="DatRoot Directory" Target="/DatRoot" Default="/mnt/user/appdata/ROMVault/DatRoot" Mode="rw,slave" Description="This is where dats will be placed. Container path: /DatRoot" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="Downloaded Dats Directory" Target="/download" Default="/mnt/user/appdata/datoso/download" Mode="rw,slave" Description="This is where unknown roms will be placed. Container path: /download" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
-
-  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/ROMVault" Mode="rw" Description="This is where the application stores its configuration, cache file, log and any files needing persistency.Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
-  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
-  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
-  <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="Mask that controls how file permissions are set for newly created files. The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="false" Mask="false">000</Config>
 
   <Config Name="LOG.LOGFILE" Target="LOG.LOGFILE" Default="datoso.log" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
   <Config Name="FBNEO.FETCHFULL" Target="FBNEO.FETCHFULL" Default="true" Mode="" Description="" Type="Variable" Display="hidden" Required="false" Mask="false">0</Config>
