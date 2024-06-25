@@ -25,6 +25,11 @@ For documentation about using ROMVault see&#xD; https://www.romvault.com/
   </Overview>
   <Category>Tools:</Category>
    <Changes>
+###v1.0.1-3.7.2 (2024-06-25)
+- Updated ROMVault to 3.7.2
+- Updated to Latest baseimage-gui
+###v1.0.0-3.7.1 (2024-05-14)
+- Updated ROMVault to 3.7.1
 ###v1.0.0-3.7.0 (2024-04-02)
 - Updated ROMVault to 3.7.0
 ###v1.0.0-3.6.4 (2024-01-10)
